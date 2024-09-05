@@ -31,7 +31,7 @@ public class Album {
     private int yearOfRelease;
 
     @Column
-    private String genre;
+    private Genre genre;
 
     @Column
     private int quantityInStock;
