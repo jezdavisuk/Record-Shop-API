@@ -4,11 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="" />
+    <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RecordManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/data/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/data/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AlbumRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/repository/AlbumRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AlbumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dev.application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dev.application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -17,16 +37,95 @@
   "associatedIndex": 7
 }]]></component>
   <component name="ProjectId" id="2le58XZkdWlIAXZuUW5w7r3wWe0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AlbumRepositoryTest.executor": "Run",
+    "JUnit.AlbumRepositoryTests.executor": "Run",
+    "JUnit.AlbumRepositoryTests.testGetAllAlbums.executor": "Run",
+    "JUnit.AlbumServiceTest.executor": "Run",
+    "JUnit.RecordManagerControllerTests (1).executor": "Run",
+    "JUnit.RecordManagerControllerTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/jezdavisuk/Northcoders/backend/security-demo"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service" />
+      <recent name="repository" />
+      <recent name="controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AlbumRepositoryTests.testGetAllAlbums">
+    <configuration name="AlbumRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.repository.AlbumRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlbumRepositoryTests.testGetAllAlbums" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.repository.AlbumRepositoryTests" />
+      <option name="METHOD_NAME" value="testGetAllAlbums" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlbumServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.service.AlbumServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecordManagerControllerTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.controller.RecordManagerControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecordManagerControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.RecordManagerControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AlbumRepositoryTests.testGetAllAlbums" />
+        <item itemvalue="JUnit.AlbumRepositoryTests" />
+        <item itemvalue="JUnit.AlbumServiceTest" />
+        <item itemvalue="JUnit.RecordManagerControllerTests (1)" />
+        <item itemvalue="JUnit.RecordManagerControllerTests" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>

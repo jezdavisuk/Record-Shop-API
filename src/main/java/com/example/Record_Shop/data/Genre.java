@@ -1,4 +1,4 @@
-package data;
+package com.example.Record_Shop.data;
 
 public enum Genre {
     ALTERNATIVE,

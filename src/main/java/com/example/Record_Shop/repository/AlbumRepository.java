@@ -1,6 +1,6 @@
-package repository;
+package com.example.Record_Shop.repository;
 
-import data.Album;
+import com.example.Record_Shop.data.Album;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
