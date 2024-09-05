@@ -7,6 +7,7 @@ import com.example.Record_Shop.repository.AlbumRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AlbumServiceImpl implements AlbumService {
@@ -19,5 +20,10 @@ public class AlbumServiceImpl implements AlbumService {
         List<Album> albums = new ArrayList<>();
         albumRepository.findAll().forEach(albums::add);
         return albums;
+    }
+
+    @Override
+    public Optional<Album> getAlbumById(Long id) {
+        return albumRepository.findById(id);
     }
 }
