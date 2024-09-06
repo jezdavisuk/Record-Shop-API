@@ -98,7 +98,7 @@ class RecordManagerControllerTests {
     }
 
     @Test
-    public void testPostMappingAddAlbum() throws Exception {
+    public void testInsertAlbum() throws Exception {
 
         List<Album> albums = new ArrayList<>();
         albums.add(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true));

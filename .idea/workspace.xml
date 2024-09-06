@@ -7,8 +7,8 @@
     <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/service/AlbumServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/repository/AlbumRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/repository/AlbumRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     "JUnit.AlbumRepositoryTests.testGetAllAlbums.executor": "Run",
     "JUnit.AlbumServiceTest.executor": "Run",
     "JUnit.AlbumServiceTest.testGetAlbumById.executor": "Run",
+    "JUnit.AlbumServiceTests.testAddAlbum.executor": "Run",
     "JUnit.RecordManagerControllerTests (1).executor": "Run",
     "JUnit.RecordManagerControllerTests.executor": "Run",
     "JUnit.RecordManagerControllerTests.testGetAlbumById.executor": "Run",
@@ -70,7 +71,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RecordManagerControllerTests.testPostMappingAddAlbum">
+  <component name="RunManager" selected="JUnit.AlbumServiceTests.testAddAlbum">
     <configuration name="RecordShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.RecordShopApplication" />
       <module name="Record-Shop" />
@@ -88,11 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumRepositoryTests.testGetAllAlbums" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AlbumServiceTests.testAddAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Record-Shop" />
-      <option name="PACKAGE_NAME" value="com.example.Record_Shop.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.repository.AlbumRepositoryTests" />
-      <option name="METHOD_NAME" value="testGetAllAlbums" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.service.AlbumServiceTests" />
+      <option name="METHOD_NAME" value="testAddAlbum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +109,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecordManagerControllerTests.testPostMappingAddAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RecordManagerControllerTests.testInsertAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Record-Shop" />
       <option name="PACKAGE_NAME" value="com.example.Record_Shop.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.controller.RecordManagerControllerTests" />
-      <option name="METHOD_NAME" value="testPostMappingAddAlbum" />
+      <option name="METHOD_NAME" value="testInsertAlbum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RecordManagerControllerTests.testPostMappingAddAlbum" />
+        <item itemvalue="JUnit.AlbumServiceTests.testAddAlbum" />
+        <item itemvalue="JUnit.RecordManagerControllerTests.testInsertAlbum" />
         <item itemvalue="Application.RecordShopApplication" />
         <item itemvalue="JUnit.AlbumServiceTests.testGetAlbumById" />
         <item itemvalue="JUnit.AlbumRepositoryTests.testGetAlbumByID" />
-        <item itemvalue="JUnit.AlbumRepositoryTests.testGetAllAlbums" />
       </list>
     </recent_temporary>
   </component>

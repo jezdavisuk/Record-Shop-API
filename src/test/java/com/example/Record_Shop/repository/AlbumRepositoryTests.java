@@ -50,4 +50,5 @@ class AlbumRepositoryTests {
         assertThat(albumRepository.findById(3L)).isEqualTo(Optional.of(expectedList.get(2)));
         assertThat(albumRepository.findById(5L)).isEqualTo(Optional.of(expectedList.get(4)));
     }
+
 }
