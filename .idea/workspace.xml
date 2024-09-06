@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/service/AlbumServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/service/AlbumServiceTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +27,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,9 +56,11 @@
     "JUnit.AlbumServiceTest.executor": "Run",
     "JUnit.AlbumServiceTest.testGetAlbumById.executor": "Run",
     "JUnit.AlbumServiceTests.testAddAlbum.executor": "Run",
+    "JUnit.AlbumServiceTests.testDeleteAlbumById.executor": "Run",
     "JUnit.AlbumServiceTests.testUpdateAlbumById.executor": "Run",
     "JUnit.RecordManagerControllerTests (1).executor": "Run",
     "JUnit.RecordManagerControllerTests.executor": "Run",
+    "JUnit.RecordManagerControllerTests.testDeleteAlbumById.executor": "Run",
     "JUnit.RecordManagerControllerTests.testGetAlbumById.executor": "Run",
     "JUnit.RecordManagerControllerTests.testPostMappingAddAlbum.executor": "Run",
     "JUnit.RecordManagerControllerTests.testUpdateAlbumById.executor": "Run",
@@ -73,7 +83,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RecordShopApplication">
+  <component name="RunManager" selected="JUnit.AlbumServiceTests.testDeleteAlbumById">
     <configuration name="RecordShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.RecordShopApplication" />
       <module name="Record-Shop" />
@@ -81,11 +91,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumServiceTests.testAddAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AlbumServiceTests.testDeleteAlbumById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Record-Shop" />
       <option name="PACKAGE_NAME" value="com.example.Record_Shop.service" />
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.service.AlbumServiceTests" />
-      <option name="METHOD_NAME" value="testAddAlbum" />
+      <option name="METHOD_NAME" value="testDeleteAlbumById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,11 +111,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecordManagerControllerTests.testInsertAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RecordManagerControllerTests.testDeleteAlbumById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Record-Shop" />
       <option name="PACKAGE_NAME" value="com.example.Record_Shop.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.controller.RecordManagerControllerTests" />
-      <option name="METHOD_NAME" value="testInsertAlbum" />
+      <option name="METHOD_NAME" value="testDeleteAlbumById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlbumServiceTests.testDeleteAlbumById" />
+        <item itemvalue="JUnit.RecordManagerControllerTests.testDeleteAlbumById" />
         <item itemvalue="Application.RecordShopApplication" />
         <item itemvalue="JUnit.AlbumServiceTests.testUpdateAlbumById" />
         <item itemvalue="JUnit.RecordManagerControllerTests.testUpdateAlbumById" />
-        <item itemvalue="JUnit.AlbumServiceTests.testAddAlbum" />
-        <item itemvalue="JUnit.RecordManagerControllerTests.testInsertAlbum" />
       </list>
     </recent_temporary>
   </component>

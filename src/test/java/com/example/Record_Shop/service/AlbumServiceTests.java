@@ -93,4 +93,21 @@ class AlbumServiceTests {
 
         assertThat(albumServiceImpl.updateAlbumById(1L, newAlbum)).isEqualTo(newAlbum);
     }
+
+    @Test
+    public void testDeleteAlbumById() {
+
+        List<Optional<Album>> albums = new ArrayList<>();
+        albums.add(Optional.of(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true)));
+        albums.add(Optional.of(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true)));
+        albums.add(Optional.of(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false)));
+        albums.add(Optional.of(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true)));
+        albums.add(Optional.of(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true)));
+
+        when(mockAlbumRepository.findById(1L)).thenReturn(albums.getFirst());
+        when(mockAlbumRepository.findById(2L)).thenReturn(Optional.empty());
+
+        assertThat(albumServiceImpl.deleteAlbumById(1L)).isEqualTo(1);
+        assertThat(albumServiceImpl.deleteAlbumById(2L)).isEqualTo(0);
+    }
 }

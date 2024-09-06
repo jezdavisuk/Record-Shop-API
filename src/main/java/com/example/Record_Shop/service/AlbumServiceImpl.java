@@ -41,4 +41,15 @@ public class AlbumServiceImpl implements AlbumService {
         oldAlbum.setAvailable(album.isAvailable());
         return albumRepository.save(oldAlbum);
     }
+
+    @Override
+    public int deleteAlbumById(Long id) {
+        Optional<Album> album = getAlbumById(id);
+        if (album.isEmpty()) {
+            return 0;
+        } else {
+            albumRepository.deleteById(id);
+            return 1;
+        }
+    }
 }
