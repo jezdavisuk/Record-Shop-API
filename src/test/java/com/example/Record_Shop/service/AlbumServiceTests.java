@@ -10,12 +10,13 @@ import com.example.Record_Shop.repository.AlbumRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @DataJpaTest
-class AlbumServiceTest {
+class AlbumServiceTests {
 
     @Mock
     private AlbumRepository mockAlbumRepository;
@@ -39,5 +40,22 @@ class AlbumServiceTest {
 
         assertThat(actualResult).hasSize(5);
         assertThat(actualResult).isEqualTo(albums);
+    }
+
+    @Test
+    public void testGetAlbumById() throws Exception {
+
+        List<Optional<Album>> albums = new ArrayList<>();
+        albums.add(Optional.of(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true)));
+        albums.add(Optional.of(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true)));
+        albums.add(Optional.of(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false)));
+        albums.add(Optional.of(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true)));
+        albums.add(Optional.of(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true)));
+
+        when(mockAlbumRepository.findById(2L)).thenReturn(albums.get(1));
+        when(mockAlbumRepository.findById(3L)).thenReturn(albums.get(2));
+
+        assertThat(albumServiceImpl.getAlbumById(2L)).isEqualTo(albums.get(1));
+        assertThat(albumServiceImpl.getAlbumById(3L)).isEqualTo(albums.get(2));
     }
 }

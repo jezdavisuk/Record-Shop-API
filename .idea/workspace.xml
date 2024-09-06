@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/repository/AlbumRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/repository/AlbumRepositoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,7 @@
     "JUnit.AlbumRepositoryTests.testGetAlbumByID.executor": "Run",
     "JUnit.AlbumRepositoryTests.testGetAllAlbums.executor": "Run",
     "JUnit.AlbumServiceTest.executor": "Run",
+    "JUnit.AlbumServiceTest.testGetAlbumById.executor": "Run",
     "JUnit.RecordManagerControllerTests (1).executor": "Run",
     "JUnit.RecordManagerControllerTests.executor": "Run",
     "JUnit.RecordManagerControllerTests.testGetAlbumById.executor": "Run",
@@ -67,19 +66,10 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumRepositoryTests.testGetAlbumByID">
+  <component name="RunManager" selected="JUnit.AlbumServiceTests.testGetAlbumById">
     <configuration name="RecordShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.RecordShopApplication" />
       <module name="Record-Shop" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlbumRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Record-Shop" />
-      <option name="PACKAGE_NAME" value="com.example.Record_Shop.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.repository.AlbumRepositoryTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +94,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AlbumServiceTests.testGetAlbumById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Record-Shop" />
+      <option name="PACKAGE_NAME" value="com.example.Record_Shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.service.AlbumServiceTests" />
+      <option name="METHOD_NAME" value="testGetAlbumById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RecordManagerControllerTests.testGetAlbumById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Record-Shop" />
       <option name="PACKAGE_NAME" value="com.example.Record_Shop.controller" />
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlbumServiceTests.testGetAlbumById" />
         <item itemvalue="JUnit.AlbumRepositoryTests.testGetAlbumByID" />
         <item itemvalue="JUnit.AlbumRepositoryTests.testGetAllAlbums" />
         <item itemvalue="JUnit.RecordManagerControllerTests.testGetAlbumById" />
         <item itemvalue="Application.RecordShopApplication" />
-        <item itemvalue="JUnit.AlbumRepositoryTests" />
       </list>
     </recent_temporary>
   </component>

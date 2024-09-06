@@ -46,7 +46,7 @@ class AlbumRepositoryTests {
         expectedList.add(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true));
 
         albumRepository.saveAll(expectedList);
-        
+
         assertThat(albumRepository.findById(3L)).isEqualTo(Optional.of(expectedList.get(2)));
         assertThat(albumRepository.findById(5L)).isEqualTo(Optional.of(expectedList.get(4)));
     }
