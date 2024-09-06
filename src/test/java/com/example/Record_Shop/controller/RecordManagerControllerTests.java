@@ -18,6 +18,7 @@ import com.example.Record_Shop.service.AlbumServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.mockito.Mockito.when;
 
@@ -67,5 +68,31 @@ class RecordManagerControllerTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$[3].artist").value("Cher Lloyd"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[4].recordName").value("Meteora"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[4].genre").value("METAL"));
+    }
+
+    @Test
+    public void testGetAlbumById() throws Exception {
+
+        List<Optional<Album>> albums = new ArrayList<>();
+        albums.add(Optional.of(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true)));
+        albums.add(Optional.of(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true)));
+        albums.add(Optional.of(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false)));
+        albums.add(Optional.of(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true)));
+        albums.add(Optional.of(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true)));
+
+        when(mockAlbumServiceImpl.getAlbumById(2L)).thenReturn(albums.get(1));
+        when(mockAlbumServiceImpl.getAlbumById(3L)).thenReturn(albums.get(2));
+
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.get("/api/v1/records/2"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(2L))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Disclosure"));
+
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.get("/api/v1/records/3"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(3L))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Curtis Mayfield"));
     }
 }
