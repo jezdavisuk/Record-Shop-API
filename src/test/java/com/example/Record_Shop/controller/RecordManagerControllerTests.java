@@ -127,4 +127,31 @@ class RecordManagerControllerTests {
         verify(mockAlbumServiceImpl, times(1)).insertAlbum(albums.get(2));
         verify(mockAlbumServiceImpl, times(1)).insertAlbum(albums.get(3));
     }
+
+    @Test
+    public void testUpdateAlbumById() throws Exception {
+
+        List<Album> albums = new ArrayList<>();
+        albums.add(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true));
+        albums.add(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true));
+        albums.add(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false));
+        albums.add(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true));
+        albums.add(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true));
+
+        Album newAlbum = new Album(1L, "Isolation", "Kali Uchis", 2018, Genre.RHYTHM_AND_BLUES, 74, true);
+
+        mockAlbumServiceImpl.insertAlbum(albums.get(0));
+        mockAlbumServiceImpl.insertAlbum(albums.get(1));
+
+        when(mockAlbumServiceImpl.updateAlbumById(1L, newAlbum)).thenReturn(newAlbum);
+
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.put("/api/v1/records/1")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(mapper.writeValueAsString(newAlbum)))
+                .andExpect(MockMvcResultMatchers.status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Kali Uchis"));
+
+        verify(mockAlbumServiceImpl, times(1)).updateAlbumById(1L, newAlbum);
+    }
 }

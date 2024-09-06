@@ -1,5 +1,6 @@
 package com.example.Record_Shop.data;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,6 +36,7 @@ public class Album {
     private int quantityInStock;
 
     @Column
-    private boolean isAvailable;
+    @JsonProperty
+    private boolean available;
 
 }

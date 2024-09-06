@@ -41,6 +41,6 @@ public class RecordManagerController {
     @PutMapping("/{id}")
     public ResponseEntity<Album> updateAlbumById(@PathVariable Long id, @RequestBody Album album) {
         Album newAlbum = albumService.updateAlbumById(id, album);
-        return new ResponseEntity<>(newAlbum, HttpStatus.OK);
+        return new ResponseEntity<>(newAlbum, HttpStatus.CREATED);
     }
 }
