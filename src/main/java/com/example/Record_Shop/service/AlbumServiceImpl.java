@@ -29,4 +29,16 @@ public class AlbumServiceImpl implements AlbumService {
     public Album insertAlbum(Album album) {
         return albumRepository.save(album);
     }
+
+    @Override
+    public Album updateAlbumById(Long id, Album album) {
+        Album oldAlbum = albumRepository.findById(id).get();
+        oldAlbum.setRecordName(album.getRecordName());
+        oldAlbum.setArtist(album.getArtist());
+        oldAlbum.setYearOfRelease(album.getYearOfRelease());
+        oldAlbum.setGenre(album.getGenre());
+        oldAlbum.setQuantityInStock(album.getQuantityInStock());
+        oldAlbum.setAvailable(album.isAvailable());
+        return albumRepository.save(oldAlbum);
+    }
 }
