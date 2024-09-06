@@ -60,7 +60,7 @@ class AlbumServiceTests {
     }
 
     @Test
-    public void testAddAlbum() {
+    public void testInsertAlbum() {
 
         List<Album> albums = new ArrayList<>();
         albums.add(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true));
@@ -74,5 +74,23 @@ class AlbumServiceTests {
 
         assertThat(albumServiceImpl.insertAlbum(albums.get(0))).isEqualTo(albums.get(0));
         assertThat(albumServiceImpl.insertAlbum(albums.get(4))).isEqualTo(albums.get(4));
+    }
+
+    @Test
+    public void testUpdateAlbumById() {
+
+        List<Optional<Album>> albums = new ArrayList<>();
+        albums.add(Optional.of(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true)));
+        albums.add(Optional.of(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true)));
+        albums.add(Optional.of(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false)));
+        albums.add(Optional.of(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true)));
+        albums.add(Optional.of(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true)));
+
+        Album newAlbum = new Album(1L, "Isolation", "Kali Uchis", 2018, Genre.RHYTHM_AND_BLUES, 74, true);
+
+        when(mockAlbumRepository.findById(1L)).thenReturn(albums.getFirst());
+        when(mockAlbumRepository.save(newAlbum)).thenReturn(newAlbum);
+
+        assertThat(albumServiceImpl.updateAlbumById(1L, newAlbum)).isEqualTo(newAlbum);
     }
 }
