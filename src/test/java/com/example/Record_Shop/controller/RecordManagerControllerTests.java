@@ -10,6 +10,7 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @AutoConfigureMockMvc
 @SpringBootTest
@@ -94,5 +95,36 @@ class RecordManagerControllerTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(3L))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Curtis Mayfield"));
+    }
+
+    @Test
+    public void testPostMappingAddAlbum() throws Exception {
+
+        List<Album> albums = new ArrayList<>();
+        albums.add(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true));
+        albums.add(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true));
+        albums.add(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false));
+        albums.add(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true));
+        albums.add(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true));
+
+        when(mockAlbumServiceImpl.insertAlbum(albums.get(2))).thenReturn(albums.get(2));
+        when(mockAlbumServiceImpl.insertAlbum(albums.get(3))).thenReturn(albums.get(3));
+
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.post("/api/v1/records/")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(mapper.writeValueAsString(albums.get(2))))
+                .andExpect(MockMvcResultMatchers.status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Curtis Mayfield"));
+
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.post("/api/v1/records/")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(mapper.writeValueAsString(albums.get(3))))
+                .andExpect(MockMvcResultMatchers.status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.artist").value("Cher Lloyd"));
+
+        verify(mockAlbumServiceImpl, times(1)).insertAlbum(albums.get(2));
+        verify(mockAlbumServiceImpl, times(1)).insertAlbum(albums.get(3));
     }
 }
