@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface AlbumService {
     List<Album> getAllAlbums();
     Optional<Album> getAlbumById(Long id);
+    Album insertAlbum(Album album);
 }

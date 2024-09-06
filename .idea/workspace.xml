@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +72,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumServiceTests.testGetAlbumById">
+  <component name="RunManager" selected="Application.RecordShopApplication">
     <configuration name="RecordShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.RecordShopApplication" />
       <module name="Record-Shop" />
@@ -116,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RecordShopApplication" />
         <item itemvalue="JUnit.AlbumServiceTests.testGetAlbumById" />
         <item itemvalue="JUnit.AlbumRepositoryTests.testGetAlbumByID" />
         <item itemvalue="JUnit.AlbumRepositoryTests.testGetAllAlbums" />
         <item itemvalue="JUnit.RecordManagerControllerTests.testGetAlbumById" />
-        <item itemvalue="Application.RecordShopApplication" />
       </list>
     </recent_temporary>
   </component>
