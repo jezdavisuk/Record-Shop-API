@@ -43,13 +43,10 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public int deleteAlbumById(Long id) {
+    public Boolean deleteAlbumById(Long id) {
         Optional<Album> album = getAlbumById(id);
-        if (album.isEmpty()) {
-            return 0;
-        } else {
-            albumRepository.deleteById(id);
-            return 1;
-        }
+        Boolean status = album.isPresent();
+        if (status) albumRepository.deleteById(id);
+        return status;
     }
 }

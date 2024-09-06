@@ -10,12 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/service/AlbumServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/controller/RecordManagerControllerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/service/AlbumServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Record_Shop/service/AlbumServiceTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,33 +40,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RecordShopApplication.executor": "Run",
-    "JUnit.AlbumRepositoryTest.executor": "Run",
-    "JUnit.AlbumRepositoryTests.executor": "Run",
-    "JUnit.AlbumRepositoryTests.testGetAlbumByID.executor": "Run",
-    "JUnit.AlbumRepositoryTests.testGetAllAlbums.executor": "Run",
-    "JUnit.AlbumServiceTest.executor": "Run",
-    "JUnit.AlbumServiceTest.testGetAlbumById.executor": "Run",
-    "JUnit.AlbumServiceTests.testAddAlbum.executor": "Run",
-    "JUnit.AlbumServiceTests.testDeleteAlbumById.executor": "Run",
-    "JUnit.AlbumServiceTests.testUpdateAlbumById.executor": "Run",
-    "JUnit.RecordManagerControllerTests (1).executor": "Run",
-    "JUnit.RecordManagerControllerTests.executor": "Run",
-    "JUnit.RecordManagerControllerTests.testDeleteAlbumById.executor": "Run",
-    "JUnit.RecordManagerControllerTests.testGetAlbumById.executor": "Run",
-    "JUnit.RecordManagerControllerTests.testPostMappingAddAlbum.executor": "Run",
-    "JUnit.RecordManagerControllerTests.testUpdateAlbumById.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/jezdavisuk/Northcoders/backend/security-demo",
-    "settings.editor.selected.configurable": "editor.stickyLines"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RecordShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumRepositoryTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumRepositoryTests.testGetAlbumByID.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumRepositoryTests.testGetAllAlbums.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumServiceTest.testGetAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumServiceTests.testAddAlbum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumServiceTests.testDeleteAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AlbumServiceTests.testUpdateAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests.testDeleteAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests.testGetAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests.testPostMappingAddAlbum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RecordManagerControllerTests.testUpdateAlbumById.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jezdavisuk/Northcoders/backend/security-demo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.stickyLines&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

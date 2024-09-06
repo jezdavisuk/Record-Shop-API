@@ -107,7 +107,7 @@ class AlbumServiceTests {
         when(mockAlbumRepository.findById(1L)).thenReturn(albums.getFirst());
         when(mockAlbumRepository.findById(2L)).thenReturn(Optional.empty());
 
-        assertThat(albumServiceImpl.deleteAlbumById(1L)).isEqualTo(1);
-        assertThat(albumServiceImpl.deleteAlbumById(2L)).isEqualTo(0);
+        assertThat(albumServiceImpl.deleteAlbumById(1L)).isEqualTo(true);
+        assertThat(albumServiceImpl.deleteAlbumById(2L)).isEqualTo(false);
     }
 }

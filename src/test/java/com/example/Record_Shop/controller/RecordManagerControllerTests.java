@@ -158,17 +158,18 @@ class RecordManagerControllerTests {
     @Test
     public void testDeleteAlbumById() throws Exception {
 
-        List<Album> albums = new ArrayList<>();
-        albums.add(new Album(1L, "Total Life Forever", "Foals", 2010, Genre.INDIE, 15, true));
-        albums.add(new Album(2L, "Settle", "Disclosure", 2013, Genre.HOUSE, 21, true));
-        albums.add(new Album(3L, "Curtis", "Curtis Mayfield", 1970, Genre.SOUL, 0, false));
-        albums.add(new Album(4L, "Cher Lloyd", "Cher Lloyd", 2011, Genre.SOUL, 100, true));
-        albums.add(new Album(5L, "Meteora", "Linkin Park", 2003, Genre.METAL, 29, true));
+        when(mockAlbumServiceImpl.deleteAlbumById(1L)).thenReturn(true);
+        when(mockAlbumServiceImpl.deleteAlbumById(2L)).thenReturn(false);
 
         this.mockMvcController.perform(
                         MockMvcRequestBuilders.delete("/api/v1/records/1"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
+        this.mockMvcController.perform(
+                        MockMvcRequestBuilders.delete("/api/v1/records/2"))
+                .andExpect(MockMvcResultMatchers.status().isNoContent());
+
         verify(mockAlbumServiceImpl, times(1)).deleteAlbumById(1L);
+        verify(mockAlbumServiceImpl, times(1)).deleteAlbumById(2L);
     }
 }
