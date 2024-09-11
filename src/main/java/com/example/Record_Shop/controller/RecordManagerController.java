@@ -9,25 +9,20 @@ import org.springframework.web.bind.annotation.*;
 import com.example.Record_Shop.service.AlbumService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/records")
 public class RecordManagerController {
 
     @Autowired
-    AlbumService albumService;
+    private AlbumService albumService;
 
     @GetMapping
-    public ResponseEntity<List<Album>> getAllAlbums() {
-        List<Album> albums = albumService.getAllAlbums();
-        return new ResponseEntity<>(albums, HttpStatus.OK);
-    }
+    public ResponseEntity<List<Album>> getAllAlbums() { return new ResponseEntity<>(albumService.getAllAlbums(), HttpStatus.OK); }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Album>> getAlbumById(@PathVariable("id") Long id) {
-        Optional<Album> albums = albumService.getAlbumById(id);
-        return new ResponseEntity<>(albums, HttpStatus.OK);
+    public ResponseEntity<Album> getAlbumById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(albumService.getAlbumById(id), HttpStatus.OK);
     }
 
     @PostMapping
@@ -39,16 +34,15 @@ public class RecordManagerController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Album> updateAlbumById(@PathVariable("id") Long id, @RequestBody Album album) {
-        Album newAlbum = albumService.updateAlbumById(id, album);
-        return new ResponseEntity<>(newAlbum, HttpStatus.CREATED);
+    public ResponseEntity<Album> placeAlbumById(@PathVariable("id") Long id, @RequestBody Album album) {
+        return new ResponseEntity<>(albumService.placeAlbumById(id, album), HttpStatus.CREATED);
     }
 
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<String> deleteAlbumById(@PathVariable("id") Long id) {
-//        if (albumService.deleteAlbumById(id)) return new ResponseEntity<>("Record deleted successfully.", HttpStatus.OK);
-//        return new ResponseEntity<>("Record could not be found.", HttpStatus.NO_CONTENT);
-//    }
+    @PatchMapping("/{id}")
+    public ResponseEntity<Album> updateAlbumById(@PathVariable("id") Long id, @RequestBody Album album) {
+        return new ResponseEntity<>(albumService.updateAlbumById(id, album), HttpStatus.NO_CONTENT);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteAlbumById(@PathVariable("id") Long id) {
         return new ResponseEntity<>(albumService.deleteAlbumById(id), HttpStatus.OK);

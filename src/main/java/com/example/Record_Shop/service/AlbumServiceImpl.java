@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.Record_Shop.repository.AlbumRepository;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -37,18 +36,37 @@ public class AlbumServiceImpl implements AlbumService {
     @Override
     public Album insertAlbum(Album album) { return albumRepository.save(album); }
 
+    public Album placeAlbumById(Long id, Album album) {
+        Optional<Album> record = albumRepository.findById(id);
+        Album newRecord;
+        if (record.isPresent()) {
+            newRecord = record.get();
+            newRecord.setRecordName(album.getRecordName());
+            newRecord.setArtist(album.getArtist());
+            newRecord.setYearOfRelease(album.getYearOfRelease());
+            newRecord.setGenre(album.getGenre());
+            newRecord.setQuantityInStock(album.getQuantityInStock());
+            newRecord.setAvailable(album.getQuantityInStock() > 0);
+            return albumRepository.save(newRecord);
+        } else {
+            album.setId(id);
+            album.setAvailable(album.getQuantityInStock() > 0);
+            return albumRepository.save(album);
+        }
+    }
+
     @Override
     public Album updateAlbumById(Long id, Album album) {
         Optional<Album> record = albumRepository.findById(id);
         Album newRecord;
         if (record.isPresent()) {
             newRecord = record.get();
-            newRecord.setRecordName(record.get().getRecordName());
-            newRecord.setArtist(record.get().getArtist());
-            newRecord.setYearOfRelease(record.get().getYearOfRelease());
-            newRecord.setGenre(record.get().getGenre());
-            newRecord.setQuantityInStock(record.get().getQuantityInStock());
-            newRecord.setAvailable(album.isAvailable());
+            newRecord.setRecordName(album.getRecordName());
+            newRecord.setArtist(album.getArtist());
+            newRecord.setYearOfRelease(album.getYearOfRelease());
+            newRecord.setGenre(album.getGenre());
+            newRecord.setQuantityInStock(album.getQuantityInStock());
+            newRecord.setAvailable(album.getQuantityInStock() > 0);
             return albumRepository.save(newRecord);
         } else {
             throw new ItemNotFoundException(String.format("Album with id '%s' cannot be located.", id));

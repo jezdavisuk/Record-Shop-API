@@ -14,6 +14,8 @@ public interface AlbumService {
 
     Album insertAlbum(Album album);
 
+    Album placeAlbumById(Long id, Album album);
+
     Album updateAlbumById(Long id, Album album);
 
     String deleteAlbumById(Long id);
