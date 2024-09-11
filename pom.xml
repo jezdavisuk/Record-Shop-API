@@ -12,7 +12,7 @@
 	<artifactId>Record-Shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Record-Shop</name>
-	<description>Fully-Fledged API modelling a retailer of vinyl records</description>
+	<description>Fully-fledged API modelling a retailer of vinyl records</description>
 	<url/>
 	<licenses>
 		<license/>

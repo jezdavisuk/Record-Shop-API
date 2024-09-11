@@ -35,7 +35,7 @@ public class Album {
     @Column
     private int quantityInStock;
 
-    @Column
+    @Column(name = "isAvailable")
     @JsonProperty
     private boolean available = quantityInStock > 0;
 
