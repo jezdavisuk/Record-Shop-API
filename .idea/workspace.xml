@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ce7f5796-6230-41e2-af64-9a25394de727" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/controller/RecordManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Record_Shop/service/AlbumServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Record_Shop/controller/RecordManagerControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/RecordShopApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/controller/RecordManagerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Record_Shop/service/AlbumServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumServiceTests.testDeleteAlbumById">
+  <component name="RunManager" selected="Application.RecordShopApplication">
     <configuration name="RecordShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Record_Shop.RecordShopApplication" />
       <module name="Record-Shop" />
@@ -127,9 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RecordShopApplication" />
         <item itemvalue="JUnit.AlbumServiceTests.testDeleteAlbumById" />
         <item itemvalue="JUnit.RecordManagerControllerTests.testDeleteAlbumById" />
-        <item itemvalue="Application.RecordShopApplication" />
         <item itemvalue="JUnit.AlbumServiceTests.testUpdateAlbumById" />
         <item itemvalue="JUnit.RecordManagerControllerTests.testUpdateAlbumById" />
       </list>
