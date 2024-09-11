@@ -1,6 +1,7 @@
 package com.example.Record_Shop.service;
 
 import com.example.Record_Shop.data.Album;
+import com.example.Record_Shop.exception.ItemNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.Record_Shop.repository.AlbumRepository;
@@ -23,7 +24,14 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public Optional<Album> getAlbumById(Long id) { return albumRepository.findById(id); }
+    public Album getAlbumById(Long id) {
+        Optional<Album> album = albumRepository.findById(id);
+        if(album.isPresent()) {
+            return album.get();
+        } else {
+            throw new ItemNotFoundException(String.format("Album with id '%s' cannot be located.", id));
+        }
+    }
 
     @Override
     public Album insertAlbum(Album album) {
