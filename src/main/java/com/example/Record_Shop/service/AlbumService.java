@@ -16,5 +16,5 @@ public interface AlbumService {
 
     Album updateAlbumById(Long id, Album album);
 
-    Boolean deleteAlbumById(Long id);
+    String deleteAlbumById(Long id);
 }

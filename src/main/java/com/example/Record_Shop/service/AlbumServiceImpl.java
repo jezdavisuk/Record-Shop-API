@@ -40,7 +40,6 @@ public class AlbumServiceImpl implements AlbumService {
     @Override
     public Album updateAlbumById(Long id, Album album) {
         Optional<Album> record = albumRepository.findById(id);
-
         Album newRecord;
         if (record.isPresent()) {
             newRecord = record.get();
@@ -54,14 +53,16 @@ public class AlbumServiceImpl implements AlbumService {
         } else {
             throw new ItemNotFoundException(String.format("Album with id '%s' cannot be located.", id));
         }
-
     }
 
     @Override
-    public Boolean deleteAlbumById(Long id) {
-        Optional<Album> album = getAlbumById(id);
-        Boolean status = album.isPresent();
-        if (status) albumRepository.deleteById(id);
-        return status;
+    public String deleteAlbumById(Long id) {
+        Optional<Album> album = albumRepository.findById(id);
+        if(album.isPresent()) {
+            albumRepository.deleteById(id);
+            return String.format("Album with id '%s' has been deleted successfully.", id);
+        } else {
+            throw new ItemNotFoundException(String.format("Album with id '%s' cannot be located.", id));
+        }
     }
 }

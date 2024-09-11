@@ -25,7 +25,7 @@ public class RecordManagerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Album>> getAlbumById(@PathVariable Long id) {
+    public ResponseEntity<Optional<Album>> getAlbumById(@PathVariable("id") Long id) {
         Optional<Album> albums = albumService.getAlbumById(id);
         return new ResponseEntity<>(albums, HttpStatus.OK);
     }
@@ -39,14 +39,18 @@ public class RecordManagerController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Album> updateAlbumById(@PathVariable Long id, @RequestBody Album album) {
+    public ResponseEntity<Album> updateAlbumById(@PathVariable("id") Long id, @RequestBody Album album) {
         Album newAlbum = albumService.updateAlbumById(id, album);
         return new ResponseEntity<>(newAlbum, HttpStatus.CREATED);
     }
 
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<String> deleteAlbumById(@PathVariable("id") Long id) {
+//        if (albumService.deleteAlbumById(id)) return new ResponseEntity<>("Record deleted successfully.", HttpStatus.OK);
+//        return new ResponseEntity<>("Record could not be found.", HttpStatus.NO_CONTENT);
+//    }
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteAlbumById(@PathVariable Long id) {
-        if (albumService.deleteAlbumById(id)) return new ResponseEntity<>("Record deleted successfully.", HttpStatus.OK);
-        return new ResponseEntity<>("Record could not be found.", HttpStatus.NO_CONTENT);
+    public ResponseEntity<String> deleteAlbumById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(albumService.deleteAlbumById(id), HttpStatus.OK);
     }
 }
