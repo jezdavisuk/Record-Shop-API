@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.Record_Shop.repository.AlbumRepository;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -34,20 +35,26 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public Album insertAlbum(Album album) {
-        return albumRepository.save(album);
-    }
+    public Album insertAlbum(Album album) { return albumRepository.save(album); }
 
     @Override
     public Album updateAlbumById(Long id, Album album) {
-        Album oldAlbum = albumRepository.findById(id).get();
-        oldAlbum.setRecordName(album.getRecordName());
-        oldAlbum.setArtist(album.getArtist());
-        oldAlbum.setYearOfRelease(album.getYearOfRelease());
-        oldAlbum.setGenre(album.getGenre());
-        oldAlbum.setQuantityInStock(album.getQuantityInStock());
-        oldAlbum.setAvailable(album.isAvailable());
-        return albumRepository.save(oldAlbum);
+        Optional<Album> record = albumRepository.findById(id);
+
+        Album newRecord;
+        if (record.isPresent()) {
+            newRecord = record.get();
+            newRecord.setRecordName(record.get().getRecordName());
+            newRecord.setArtist(record.get().getArtist());
+            newRecord.setYearOfRelease(record.get().getYearOfRelease());
+            newRecord.setGenre(record.get().getGenre());
+            newRecord.setQuantityInStock(record.get().getQuantityInStock());
+            newRecord.setAvailable(album.isAvailable());
+            return albumRepository.save(newRecord);
+        } else {
+            throw new ItemNotFoundException(String.format("Album with id '%s' cannot be located.", id));
+        }
+
     }
 
     @Override
